@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {fetchPresidents} from './fetchPresidentsThunk';
 import { connect } from 'react-redux';
-import {PresidentCardArea} from './PresidentCardArea';
+import PresidentCardArea from './PresidentCardArea';
 
 class App extends Component {
   componentDidMount() {
@@ -12,9 +12,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        hello i'm still working
-      {this.props.error && <h2>{this.props.error}</h2>}
-      {this.props.isLoading ? <div>Loading...</div> : <PresidentCardArea />}
+        <h1>Presidents of the United States of America || A List of Assholes</h1>
+        {this.props.error && <h2>{this.props.error}</h2>}
+        {this.props.isLoading ? <div>Loading...</div> : <PresidentCardArea />}
       </div>
     );
   }

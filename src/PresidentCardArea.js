@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import {PresidentCard} from './PresidentCard';
+import {connect} from 'react-redux';
 
-export const PresidentCardArea = (props) => {
+export const PresidentCardArea = ({presidents}) => {
+  const jsxPresidentCards = presidents.map(president => {
+    return <PresidentCard president={president}/>
+  })
+
   return(
     <div>
-      Presidents go here
+      {jsxPresidentCards}
     </div>
   )
 }
+
+export const mapStateToProps = state => ({
+  presidents: state.presidents
+})
+
+export default connect(mapStateToProps)(PresidentCardArea)
