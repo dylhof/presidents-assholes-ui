@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Presidents of the United States of America || A List of Assholes</h1>
+        <h1 className='main-title'>Presidents of the United States of America || A List of Assholes</h1>
         {this.props.error && <h2>{this.props.error}</h2>}
         {this.props.isLoading ? <div>Loading...</div> : <PresidentCardArea />}
       </div>

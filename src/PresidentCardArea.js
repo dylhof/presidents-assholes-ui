@@ -8,7 +8,7 @@ export const PresidentCardArea = ({presidents}) => {
   })
 
   return(
-    <div>
+    <div className='card-area'>
       {jsxPresidentCards}
     </div>
   )
