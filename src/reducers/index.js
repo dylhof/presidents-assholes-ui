@@ -1,10 +1,11 @@
 import {combineReducers} from 'redux'
-import { loadingReducer, errorReducer, presidentsReducer } from './reducers'
+import { loadingReducer, errorReducer, presidentsReducer, partyReducer } from './reducers'
 
 const rootReducer = combineReducers({
   isLoading: loadingReducer,
   error: errorReducer,
-  presidents: presidentsReducer
+  presidents: presidentsReducer,
+  party: partyReducer
 })
 
 export default rootReducer;

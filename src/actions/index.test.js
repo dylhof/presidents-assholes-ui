@@ -1,4 +1,4 @@
-import { setLoading, setError, setPresidents } from './index';
+import { setLoading, setError, setPresidents, setPartyFilter } from './index';
 
 describe('actions', () => {
   it('should have a type of SET_LOADING and an isLoading bool', () => {
@@ -35,6 +35,18 @@ describe('actions', () => {
     }
     //execution
     const result = setPresidents(mockPresidents)
+    //expectation
+    expect(result).toEqual(expectedAction)
+  })
+
+  it('should have a type of SET_PARTY_FILTER and party', () => {
+    //setup
+    const expectedAction = {
+      type: 'SET_PARTY_FILTER',
+      party: 'Whig'
+    }
+    //execution
+    const result = setPartyFilter('Whig')
     //expectation
     expect(result).toEqual(expectedAction)
   })

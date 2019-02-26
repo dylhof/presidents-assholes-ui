@@ -24,3 +24,12 @@ export const presidentsReducer = (state = [], action) => {
       return state;
   }
 }
+
+export const partyReducer = (state='', action) => {
+  switch(action.type) {
+    case 'SET_PARTY_FILTER':
+      return action.party;
+    default:
+      return state;
+  }
+}

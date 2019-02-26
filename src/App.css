@@ -5,6 +5,7 @@
 
 .main-title {
   text-align: center;
+  color:#d8d4d4;
 }
 
 .card-area {
@@ -19,7 +20,7 @@
   height: 300px;
   margin: 5px;
   padding: 5px;
-  background-color: #081c8a;
+  background-color: #051676fa;
 }
 
 .cardText {

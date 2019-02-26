@@ -12,3 +12,8 @@ export const setPresidents = presidents => ({
   type: 'SET_PRESIDENTS',
   presidents
 })
+
+export const setPartyFilter = party => ({
+  type: 'SET_PARTY_FILTER',
+  party
+})
