@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {fetchPresidents} from './fetchPresidentsThunk';
 import { connect } from 'react-redux';
+import {PresidentCardArea} from './PresidentCardArea';
 
 class App extends Component {
   componentDidMount() {
@@ -12,6 +13,8 @@ class App extends Component {
     return (
       <div className="App">
         hello i'm still working
+      {this.props.error && <h2>{this.props.error}</h2>}
+      {this.props.isLoading ? <div>Loading...</div> : <PresidentCardArea />}
       </div>
     );
   }
@@ -21,4 +24,9 @@ export const mapDispatchToProps = dispatch => ({
   fetchPresidents: url => dispatch(fetchPresidents(url))
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export const mapStateToProps = state => ({
+  isLoading: state.isLoading,
+  error: state.error
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
