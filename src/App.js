@@ -4,7 +4,7 @@ import {fetchPresidents} from './fetchPresidentsThunk';
 import { connect } from 'react-redux';
 import PresidentCardArea from './PresidentCardArea';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     this.props.fetchPresidents('http://localhost:3001/api/v1/presidents')
   }
